@@ -20,13 +20,10 @@ Les logs doivent être récupérés dynamiquement par une application web utilis
 La gestion des logs est un enjeu de plus en plus grand pour les entreprises. Dans le cas du monitoring de micro-services, cela permet d'isoler le plus rapidement possible les problemes au sein de l'application. 
 
 * Stack ELK
-
-Maintenant appelé Elastic stack, comprend :
-	   * Elasticsearch, qui permet le sotckage  et l'indexation des requêtes
-		
-	   * Logstash, qui assure l'analyse, le filtrage et le découpage des logs
-
-	   * Kibana est un dashboard permettant l'affichage des logs. 
+  Maintenant appelé Elastic stack, comprend :
+  	     * Elasticsearch, qui permet le sotckage  et l'indexation des requêtes
+	     * Logstash, qui assure l'analyse, le filtrage et le découpage des logs
+	     * Kibana est un dashboard permettant l'affichage des logs. 
 
 * Splunk
 

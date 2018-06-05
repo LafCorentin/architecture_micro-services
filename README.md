@@ -21,9 +21,9 @@ La gestion des logs est un enjeu de plus en plus grand pour les entreprises. Dan
 
 * Stack ELK
   Maintenant appelé Elastic stack, comprend :
-  	     * Elasticsearch, qui permet le sotckage  et l'indexation des requêtes
-	     * Logstash, qui assure l'analyse, le filtrage et le découpage des logs
-	     * Kibana est un dashboard permettant l'affichage des logs. 
+  * Elasticsearch, qui permet le sotckage  et l'indexation des requêtes
+  * Logstash, qui assure l'analyse, le filtrage et le découpage des logs
+  * Kibana est un dashboard permettant l'affichage des logs. 
 
 * Splunk
 

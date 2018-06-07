@@ -21,7 +21,7 @@ La gestion des logs est un enjeu de plus en plus grand pour les entreprises. Dan
 
 * Stack ELK
   Maintenant appelÃ© Elastic stack, comprend :
-  * Elasticsearch, qui permet le sotckage  et l'indexation des requÃªtes
+  * Elasticsearch, qui permet le sotckage  et l'indexation des requÃªtes. Il est basé sur le moteur de recherche Apache Lucene et a pour principales caractéristiques l'utilisation d'une base de données NoSQL, une forte scalabilité, l'utilisation d'une API REST et des temps de réponse compris entre 20ms et 300ms.
   * Logstash, qui assure l'analyse, le filtrage et le dÃ©coupage des logs
   * Kibana est un dashboard permettant l'affichage des logs. 
 

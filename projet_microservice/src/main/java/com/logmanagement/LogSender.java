@@ -11,6 +11,8 @@ import java.util.List;
 import com.logs.GeneLog;
 import com.logs.logXMLTest;
 
+import filter.Filterer;
+
 public class LogSender {
 
 	protected final static String cheminOutput = "http.serveur_inconnu.com/BDD";
@@ -19,12 +21,12 @@ public class LogSender {
 	protected final String source;
 	
 	protected float period;
-	protected LogTester tester;
+	protected Filterer tester;
 	
 	public LogSender(String source) {
 		if (majPeriod() != 1)
 			period = 10f;
-		tester = new LogTester(cheminDocParam);
+		tester = new Filterer(cheminDocParam);
 		this.source = source;
 	}
 	

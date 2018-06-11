@@ -1,13 +1,13 @@
-package com.logmanagement;
+package filter;
 
 import com.logs.GeneLog;
 import java.util.Date;
 
-public class ConditionBorne implements ConditionOnLog {
+public class FilterBorne extends AbstractFilter {
 	Date borne_inf;
 	Date borne_sup;
 	
-	public ConditionBorne(Date inf, Date sup) {
+	public FilterBorne(Date inf, Date sup) {
 		borne_inf = inf;
 		borne_sup = sup;
 	}

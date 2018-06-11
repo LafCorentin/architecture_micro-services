@@ -1,8 +1,8 @@
-package com.logmanagement;
+package filter;
 
 import com.logs.GeneLog;
 
-public class ConditionTrue implements ConditionOnLog {
+public class FilterTrue extends AbstractFilter {
 
 	@Override
 	public boolean tester(GeneLog log) {

@@ -1,4 +1,4 @@
-package com.logmanagement;
+package filter;
 
 import java.io.DataInputStream;
 import java.io.File;
@@ -9,17 +9,17 @@ import java.util.Collection;
 import java.util.Iterator;
 import com.logs.GeneLog;
 
-public class LogTester {
+public class Filterer {
 
-	protected ConditionOnLog condt;
+	protected AbstractFilter filter;
 	
 	protected final String cheminParam;
 	
 	public boolean testLog(GeneLog log) {
-		return condt.tester(log);
+		return filter.tester(log);
 	}
 	
-	public void majCond() {
+	public void majFilter() {
 		DataInputStream dis;
 		int res = -1;
 		try {
@@ -36,24 +36,24 @@ public class LogTester {
 		
 		switch (res) {
 		
-		// TODO raccrocher ici la généraation des conditions
+		// TODO raccrocher ici la génération des conditions
 		
 		// TODO rajouter aussi le cas ou on ne change que les paramètres et où l'on ne recréé pas la classe
 
 		default:
-			condt = new ConditionTrue();
+			filter = new FilterTrue();
 		}
 	}
 	
-	public LogTester(String chemin) {
+	public Filterer(String chemin) {
 		cheminParam = chemin;
-		majCond();
+		majFilter();
 	}
 
 	public Collection<GeneLog> filtrerLogs(Collection<GeneLog> nvLogs) {
 		GeneLog res = null;
 		for (Iterator<GeneLog> it = nvLogs.iterator(); it.hasNext(); res = it.next())
-			if (res != null && !condt.tester(res))
+			if (res != null && !filter.tester(res))
 				it.remove();
 		return nvLogs;
 	}

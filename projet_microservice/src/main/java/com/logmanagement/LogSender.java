@@ -17,7 +17,7 @@ public class LogSender {
 
 	protected final static String cheminOutput = "http.serveur_inconnu.com/BDD";
 	protected final static String cheminDocParam = "src/paramAgent.json";
-	// il se peut qu'un jour ai plusieurs agents dans le meme endroit, alors il faudra paramètriser tout ça
+	// il se peut qu un jour j ai plusieurs agents dans le meme endroit alors il faudra parametriser tout ça
 	protected final String source;
 	
 	protected float period;
@@ -35,7 +35,7 @@ public class LogSender {
 		Collection<GeneLog> nvLogs;
 		boolean boucler = true;
 		while (boucler) {
-			// TODO un système d'arrêt commandable depuis l'extérieur
+			// TODO un systeme d arret commandable depuis l extérieur
 			// TODO majPeriod et majFiltre pas trop souvent
 			
 			nvLogs = recupNvLogs();

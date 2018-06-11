@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>projet_microservice</name>
-	<description>Projet pour le stage d&#39;implémentation d&#39;une architecture micro-service</description>
+	<description>Projet pour le stage d implémentation d une architecture micro-service</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

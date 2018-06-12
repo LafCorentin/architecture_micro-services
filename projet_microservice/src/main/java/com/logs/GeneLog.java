@@ -35,6 +35,13 @@ public abstract class GeneLog {
 	}
 	
 	public String toString() {
-		return "" + getID() + getDate() + getHostname() + getFacility() + getSeverityLvl() + getMSG();
+		int id = getID();
+		Date date = getDate();
+		String hostname = getHostname();
+		int facility = getFacility();
+		int severity = getSeverityLvl();
+		return "" + (id != -1 ? id + " " : "") + (date != null ? date.toString() + " " : "") 
+				+ (hostname != "" ? hostname + " " : "") + " " + (facility != -1 ? facility + " " : "") 
+					+ (severity != -1 ? severity + " " : "") + getMSG();
 	}
 }

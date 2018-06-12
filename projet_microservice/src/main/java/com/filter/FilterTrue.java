@@ -1,4 +1,4 @@
-package filter;
+package com.filter;
 
 import com.logs.GeneLog;
 

@@ -1,0 +1,4 @@
+type de log : 0
+period : 20
+type de filtre : 0
+Autre paramètres :

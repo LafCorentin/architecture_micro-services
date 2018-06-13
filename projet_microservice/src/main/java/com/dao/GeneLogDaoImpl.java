@@ -19,12 +19,12 @@ public class GeneLogDaoImpl implements LogDao {
         logs.add(new logXMLTest(new String("<![LOG[Exiting Microsoft::EmbeddedDeviceManager::Deployment::UwfManager::SuspendProtection...]LOG]!><time=\"13:03:11.855-120\" date=\"06-02-2018\" component=\"MaintenanceCoordinator\" context=\"\" type=\"0\" thread=\"2188\" file=\"uwfmanager.cpp:124\">")));
     }
     
-//	@Override
+	@Override
     public List <GeneLog> findAll(){
 		return logs;
 	}
 	
-//	@Override
+	@Override
     public GeneLog findById(int id){
 		for (GeneLog log : logs) {
 			if(log.getID() == id) {
@@ -34,13 +34,13 @@ public class GeneLogDaoImpl implements LogDao {
 		return null;
 	}
 	
-//	@Override
+	@Override
     public GeneLog save(GeneLog log){
     	logs.add(log);
     	return log;
     }
-    
-//    @override
+	
+    @Override
     public GeneLog findBySeverityLvl(int severitylvl) {
     	// Trouve le premier log de ce severity lvl
         for (GeneLog log : logs) {  

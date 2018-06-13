@@ -12,37 +12,49 @@ import java.lang.String;
 import java.util.Date;
 
 @RestController
+@Controller
 public class LogController {
 	
-	    @Autowired(required=false)
-	    public GeneLogDaoImpl LogDao;
-	
-	    //Récupérer la liste compleste des logs
+//	    @Autowired
+	    public LogDao logdao;
+	    
+	    
+//	    @RequestMapping(value="/log0", method=RequestMethod.GET)
+//	    public String log0() {
+//	        return logs[0].getData();
+//	    }
+	    
+	    
+	    @RequestMapping("/hello")
+	    public String hello() {
+	        return "Helloworld";
+	    }
+	    //Récupérer la liste complete des logs
 	    @RequestMapping(value="/ListeLogs", method=RequestMethod.GET)
 	    public List <GeneLog> listeLogs() {
-	        return LogDao.findAll();
+	        return logdao.findAll();
 	    }
 	   
 	    
 	    @GetMapping(value = "/SeverityLvl/{lvl}")
 	    public String afficherUnLogSeverityLvl(@PathVariable int lvl) {
-	    	return (LogDao.findBySeverityLvl(lvl)).toString();
+	    	return (logdao.findBySeverityLvl(lvl)).toString();
 	    }
 	    
-	    @GetMapping(value = "/afficherUnLog")
-	    public String afficherUnLog() {
+	    @GetMapping(value = "/AfficherUnLogEtId")
+	    public String afficherUnLogEtId() {
 	    	// Devra prendre en argument un log et l'afficher
 	    	logXMLTest log = new logXMLTest(new String("Contenu du log d'Id="));
 	        return (log.getData()+log.getID());
 	    }
 	    
-
-
-	    
-//	    @GetMapping(value = "/afficherUnLog")
-//	    public String afficherUnLog() {
-//	    	// Devra prendre un argument un log et son iD et l'afficher
-//	    	logXMLTest log = new logXMLTest(new String("Contenu du log"));
+	    @GetMapping(value = "/afficherUnLog")
+	    public String afficherUnLog() {
+	    	// Devra prendre en arguments un log et son iD et l'afficher TODO
+	    	logXMLTest log = new logXMLTest(new String("<![LOG[Exiting Microsoft::EmbeddedDeviceManager::Deployment::UwfManager::CheckWriteFilterProtection...]LOG]!><time=\"13:03:11.840-120\" date=\"06-02-2018\" component=\"MaintenanceCoordinator\" context=\"\" type=\"0\" thread=\"2188\" file=\"uwfmanager.cpp:501\">"));
+	    	System.out.println(log.getMSG());
 //	        return log.getData();
-//	    }
+	    	return "/vue-afficherUnLog";
+//	    	sreturn log.getMSG();
+	    }
 }

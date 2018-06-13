@@ -54,7 +54,7 @@ public class LogController {
 	    	logXMLTest log = new logXMLTest(new String("<![LOG[Exiting Microsoft::EmbeddedDeviceManager::Deployment::UwfManager::CheckWriteFilterProtection...]LOG]!><time=\"13:03:11.840-120\" date=\"06-02-2018\" component=\"MaintenanceCoordinator\" context=\"\" type=\"0\" thread=\"2188\" file=\"uwfmanager.cpp:501\">"));
 	    	System.out.println(log.getMSG());
 //	        return log.getData();
-	    	return "/vue-afficherUnLog";
+	    	return "afficherUnLog";
 //	    	sreturn log.getMSG();
 	    }
 }

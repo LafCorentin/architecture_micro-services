@@ -1,4 +1,4 @@
 type de log : 0
-period : 20
+period : 10
 type de filtre : 0
-Autre paramètres :
+corentin

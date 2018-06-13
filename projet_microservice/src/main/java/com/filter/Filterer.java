@@ -23,6 +23,8 @@ public class Filterer {
 		File file = new File(cheminParam);
 		FileReader fr;
 		int res = 0;
+		String fin = "";
+		
 	    try {
 	    	
 	    	fr = new FileReader(file);
@@ -30,6 +32,7 @@ public class Filterer {
 	    	LectEcrPerso.nextInt(fr);
 	    	LectEcrPerso.nextInt(fr);
 	    	res = LectEcrPerso.nextInt(fr);
+	    	fin = LectEcrPerso.lireFin(fr);
 	    	
 	    	fr.close();
 	    	
@@ -38,18 +41,28 @@ public class Filterer {
 	    } catch (IOException e) {
 	    	e.printStackTrace();
 	    }
-		
+	    
 		switch (res) {
 		case 0:
-			filter = new FilterTrue();
+			fin = fin.substring(1);
+			if (filter != null && filter instanceof FilterRegex ){
+				
+				FilterRegex newFilter = (FilterRegex) filter;
+				if (!newFilter.getParam().equals(fin)) {
+					newFilter.setParam(fin);
+					filter = newFilter;					
+				}
+			}
+			else
+					filter = new FilterRegex(fin);
 			break;
+			
 		// TODO raccrocher ici la génération des conditions
 		
-		// TODO rajouter aussi le cas ou on ne change que les paramètres et où l'on ne recréé pas la classe
-
 		default:
 			filter = new FilterTrue();
 		}
+		System.out.println(fin);
 	}
 	
 	public Filterer(String chemin) {
@@ -60,7 +73,7 @@ public class Filterer {
 	public Collection<GeneLog> filtrerLogs(Collection<GeneLog> nvLogs) {
 		GeneLog res = null;
 		for (Iterator<GeneLog> it = nvLogs.iterator(); it.hasNext(); res = it.next())
-			if (res != null && !filter.tester(res))
+			if (res != null && !filter.tester(res)) 
 				it.remove();
 		return nvLogs;
 	}

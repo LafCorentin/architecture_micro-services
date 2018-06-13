@@ -86,6 +86,7 @@ public class LogSender {
 			res = log.toString();
 			if (!LectEcrPerso.visible(res))
 				System.out.println(res);
+				
 		}
 	}
 

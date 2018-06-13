@@ -8,5 +8,5 @@
 <![LOG[GetObjectAsync - Error handling request, 8004100f]LOG]!><time="10:38:07.514-120" date="06-11-2018" component="InventoryProvider" context="" type="3" thread="10956" file="inventoryprovider.cpp:185">
 <![LOG[PopulateInstance - Requested instance not found.]LOG]!><time="10:38:07.605-120" date="06-11-2018" component="InventoryProvider" context="" type="1" thread="10956" file="sqlceproviderbase.cpp:213">
 <![LOG[GetObjectAsync - Error handling request, 8004100f]LOG]!><time="10:38:07.606-120" date="06-11-2018" component="InventoryProvider" context="" type="3" thread="10956" file="inventoryprovider.cpp:185">
-<![LOG[PopulateInstance - Requested instance not found.]LOG]!><time="10:38:07.609-120" date="06-11-2018" component="InventoryProvider" context="" type="1" thread="10956" file="sqlceproviderbase.cpp:213">
+<![LOG[PopulateInstacorentince - Requested instance not found.]LOG]!><time="10:38:07.609-120" date="06-11-2018" component="InventoryProvider" context="" type="1" thread="10956" file="sqlceproviderbase.cpp:213">
 <![LOG[GetObjectAsync - Error handling request, 8004100f]LOG]!><time="10:38:07.610-120" date="06-11-2018" component="InventoryProvider" context="" type="3" thread="10956" file="inventoryprovider.cpp:185">
